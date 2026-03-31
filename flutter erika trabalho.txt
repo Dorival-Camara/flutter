@@ -1,0 +1,358 @@
+main.dart
+
+import 'package:flutter/material.dart';
+import 'library_screen.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: LibraryScreen()
+    );
+  }
+}
+
+library_screen.dart
+
+import 'package:flutter/material.dart';
+import 'manga_detalhes_screen.dart';
+
+class LibraryScreen extends StatelessWidget {
+  const LibraryScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      appBar: AppBar(
+        backgroundColor: Colors.purple,
+        title: Text(
+          "MANGA PLUS",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.normal,
+            fontSize: 20,
+          ),
+        ),
+        actions: [
+          Icon(Icons.menu, color: Colors.white),
+          SizedBox(width: 15),
+          IconButton(
+            onPressed: () {
+              print("Botao Pressionado");
+            },
+            icon: Icon(Icons.settings, color: Colors.white),
+          ),
+          SizedBox(width: 10),
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                "Destaque da Semana",
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.orange,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 16),
+              width: double.infinity,
+              height: 200,
+              child: Image.network(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSufO2zZFaNl8PMAVsvYPyXdaqmTha4LXSNBQ&s",
+                fit: BoxFit.cover,
+              ),
+            ),
+            SizedBox(height: 15),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange,
+                foregroundColor: Colors.black,
+                elevation: 5,
+                minimumSize: Size(150, 40),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MangaDetalhesScreen(),
+                  ),
+                );
+              },
+              child: Text("Leia Agora"),
+            ),
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                "Populares",
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.orange,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ),
+            SizedBox(height: 10),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    width: 100,
+                    height: 150,
+                    child: Image.network(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Y6rpaRt8CQSvI_LDezHQb8lJ2hTZH1f5lw&s",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    width: 100,
+                    height: 150,
+                    child: Image.network(
+                      "https://cdn.myanimelist.net/images/manga/2/253119.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    width: 100,
+                    height: 150,
+                    child: Image.network(
+                      "https://cdn.myanimelist.net/images/manga/1/157897.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    width: 100,
+                    height: 150,
+                    child: Image.network(
+                      "https://cdn.myanimelist.net/images/manga/3/80661.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                "Lançamentos",
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.orange,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ),
+            SizedBox(height: 10),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    width: 100,
+                    height: 150,
+                    child: Image.network(
+                      "https://cdn.myanimelist.net/images/manga/3/179882.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    width: 100,
+                    height: 150,
+                    child: Image.network(
+                      "https://static.wikia.nocookie.net/webtoon/images/1/13/ZOMGAN_Banner.png/revision/latest?cb=20221021030623",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    width: 100,
+                    height: 150,
+                    child: Image.network(
+                      "https://cdn.myanimelist.net/images/manga/1/209370.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    width: 100,
+                    height: 150,
+                    child: Image.network(
+                      "https://cdn.myanimelist.net/images/manga/2/241937.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                "Recomendados",
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.orange,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ),
+            SizedBox(height: 10),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    width: 100,
+                    height: 150,
+                    child: Image.network(
+                      "https://cdn.myanimelist.net/images/manga/1/137573.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    width: 100,
+                    height: 150,
+                    child: Image.network(
+                      "https://cdn.myanimelist.net/images/manga/3/114037.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    width: 100,
+                    height: 150,
+                    child: Image.network(
+                      "https://cdn.myanimelist.net/images/manga/2/153111.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    width: 100,
+                    height: 150,
+                    child: Image.network(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRxmq-D0MpDUV5eEhxC98yseYsxqzZmceV5g&s",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+manga_detalhes_screen.dart
+
+
+import 'package:flutter/material.dart';
+
+class MangaDetalhesScreen extends StatelessWidget {
+  const MangaDetalhesScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      appBar: AppBar(
+        backgroundColor: Colors.purple,
+        title: Text("Sobre a Obra",
+        style: TextStyle(
+          color: Colors.white,
+          fontFamily: "Arial",
+          fontWeight: FontWeight.normal,
+          fontSize: 18
+        ),
+        ),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: 150,
+                height: 220,
+                child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk84iQNMlzakEkaUCXt8suxnhER2grNorQIw&s",
+                fit:BoxFit.cover
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text("CHAINSAW MAN",
+              style: TextStyle(
+                color: Colors.orange,
+                fontSize: 18,
+                fontWeight: FontWeight.normal
+              ),),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Text("Denji é um jovem que vive na miséria e trabalha como caçador de demônios. Após fazer um pacto com o demônio Pochita, ele se transforma em Chainsaw Man, um híbrido com motosserras saindo de seu corpo. Agora ele trabalha para uma organização de caçadores enfrentando ameaças sobrenaturais.",
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontSize: 13
+                ),
+                textAlign: TextAlign.center,
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.purple,
+                  foregroundColor: Colors.white,
+                  minimumSize: Size(120, 40),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+                onPressed: (){
+                  Navigator.pop(context);
+                }, 
+                child: Text("Retornar"))
+            ],
+          ),
+        ),
+    );
+  }
+}
