@@ -1,4 +1,4 @@
-import 'package:app_spotify/play_list_sreen.dart';
+import 'play_list_sreen.dart';
 import 'package:flutter/material.dart';
 
 class SpotifyScreem extends StatelessWidget {
