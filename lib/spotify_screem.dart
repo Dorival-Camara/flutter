@@ -1,5 +1,5 @@
+import 'package:app_spotify/play_list_sreen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/play_list_scream.dart';
 
 class SpotifyScreem extends StatelessWidget {
   const SpotifyScreem({super.key});
@@ -23,10 +23,12 @@ class SpotifyScreem extends StatelessWidget {
           SizedBox(width: 15),
           IconButton(
             onPressed: () {
-              // print("Botão Cadastrar pressionado");
-              Navigator.push(context,
+             // print("Botão Cadastrar pressionado");
+             Navigator.push(
+              context, 
               MaterialPageRoute(
-                builder: (context) => Play_list_scream())
+                builder: (context) => PlayListSreen()
+                )
               );
             },
             icon: Icon(Icons.add, color: Colors.white, size: 36),
@@ -73,12 +75,13 @@ class SpotifyScreem extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 2),
+              
 
               //Lista de Musicas
               ListTile(
                 leading: Icon(Icons.music_note, color: Colors.white),
                 title: Text(
-                  "Samba",
+                  "Minha PlayList 1",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -86,7 +89,7 @@ class SpotifyScreem extends StatelessWidget {
                   ),
                 ),
                 subtitle: Text(
-                  "Fundo de Quintal",
+                  "Artista Desconhecido",
                   style: TextStyle(color: Colors.grey),
                 ),
               ),
@@ -102,36 +105,6 @@ class SpotifyScreem extends StatelessWidget {
                 ),
                 subtitle: Text(
                   "Hits Pop",
-                  style: TextStyle(color: Colors.grey),
-                ),
-              ),
-              ListTile(
-                leading: Icon(Icons.music_note_rounded, color: Colors.white),
-                title: Text(
-                  "Sertanejo Universitário",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-                subtitle: Text(
-                  "Henrique e Juliano, Jorge e mateus, Marília Mendonça ",
-                  style: TextStyle(color: Colors.grey),
-                ),
-              ),
-              ListTile(
-                leading: Icon(Icons.music_note_rounded, color: Colors.white),
-                title: Text(
-                  "HipHop internacional",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-                subtitle: Text(
-                  "Vários artistas",
                   style: TextStyle(color: Colors.grey),
                 ),
               ),
@@ -156,52 +129,7 @@ class SpotifyScreem extends StatelessWidget {
                       width: 120,
                       height: 120,
                       child: Image.network(
-                        "https://i.scdn.co/image/ab67616d0000b2730d02093a44e1fbb3a6e5cb26",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 16),
-                      width: 120,
-                      height: 120,
-                      child: Image.network(
-                        "https://i.scdn.co/image/ab67616d0000b2735de256a1d975c8e275663546",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 16),
-                      width: 120,
-                      height: 120,
-                      child: Image.network(
-                        "https://i.scdn.co/image/ab67616d0000b27306a2e8014cec5dca76d8261b",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 10),
-              //Lista de Albuns com Scroll
-              Text(
-                "Albuns Internacionais",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 10),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(left: 16),
-                      width: 120,
-                      height: 120,
-                      child: Image.network(
-                        "https://portalpopline.com.br/wp-content/uploads/2025/04/albuns-artistas-pop-2025.jpg",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsCkVw0o4_eFbiIjmhLFEQ4g7SnOwwqKv_pg&s",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -223,6 +151,15 @@ class SpotifyScreem extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
+                    Container(
+                      margin: EdgeInsets.only(left: 16),
+                      width: 120,
+                      height: 120,
+                      child: Image.network(
+                        "https://portalpopline.com.br/wp-content/uploads/2025/04/albuns-artistas-pop-2025.jpg",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -246,7 +183,7 @@ class SpotifyScreem extends StatelessWidget {
                       width: 120,
                       height: 120,
                       child: Image.network(
-                        "https://cdn-images.dzcdn.net/images/cover/a7a16b8f63b1ec0e9fbd327619966737/0x1900-000000-80-0-0.jpg",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgITL3uhopZpAoaytjQbrvxSXbxoFcCEvAMQ&s",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -255,7 +192,7 @@ class SpotifyScreem extends StatelessWidget {
                       width: 120,
                       height: 120,
                       child: Image.network(
-                        "https://akamai.sscdn.co/letras/360x360/albuns/0/2/6/9/2495961736155565.jpg",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLur6dGKlGkQE2bk2SNbBB6T2wNkCTDYNrLg&s",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -264,7 +201,70 @@ class SpotifyScreem extends StatelessWidget {
                       width: 120,
                       height: 120,
                       child: Image.network(
-                        "https://i1.sndcdn.com/artworks-zGYQaoOpbhDkfr2z-cemWbw-t500x500.jpg",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRyj8nEPewGzkBzPa-9oNnx4dH4lAow40b2w&s",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 16),
+                      width: 120,
+                      height: 120,
+                      child: Image.network(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBFdm9-ZhNDguQOAFRWljR2mnVqNRA-iMWGg&s",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 10),
+              //Lista de Albuns com Scroll
+              Text(
+                "Albuns Pop Rock",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 10),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 16),
+                      width: 120,
+                      height: 120,
+                      child: Image.network(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZoWdYB9uDkZgCknxXCnFGYy0eseCm67Cb9Q&s",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 16),
+                      width: 120,
+                      height: 120,
+                      child: Image.network(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG8kLv1tBCWTBeb-w6-sxOqUUZ1zMloc_JNA&s",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 16),
+                      width: 120,
+                      height: 120,
+                      child: Image.network(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmuz59JVdS9bY8mBwcYZX7_QZ2R7w6UEdO_A&s",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 16),
+                      width: 120,
+                      height: 120,
+                      child: Image.network(
+                        "https://down-br.img.susercontent.com/file/br-11134207-7qukw-li9bcqvk9qut85",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -275,8 +275,6 @@ class SpotifyScreem extends StatelessWidget {
           ),
         ],
       ),
-
-      
       //menu barra de navegação
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.black,
